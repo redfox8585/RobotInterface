@@ -16,11 +16,7 @@ function loaded () {
 		momentum: false,
 		snap: true,
 		snapSpeed: 400,
-		keyBindings: true,
-		indicators: {
-			el: document.getElementById('indicator'),
-			resize: false
-		}
+		keyBindings: true
 	});
 }
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -49,7 +45,7 @@ body {
 	width: 400px;
 	height: 400px;
 	margin: 0 auto;
-	background: #FFFFFF;
+	background: #FF0000;
 	overflow: hidden;
 }
 #wrapper {
@@ -78,22 +74,7 @@ body {
 	-ms-text-size-adjust: none;
 	-o-text-size-adjust: none;
 	text-size-adjust: none;
-	background-color: #444;
-}
-
-#indicator {
-	position: relative;
-	width: 3vw;
-	height: 3vh;
-	margin: 10px auto;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUBAMAAABohZD3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUGCDYztyDUJgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGFBMVEUAAADNzc3Nzc3Nzc3Nzc3Nzc3Nzc3///8aWwwLAAAABnRSTlMAX5Ks3/nRD0HIAAAAAWJLR0QHFmGI6wAAAFtJREFUGFdjYGBgEHYNMWRAAJE0IHCEc5nSwEABxleD8JOgXMY0KBCA8FlgfAcIXwzGT4TwzWD8ZAjfDcZPgfDDYPxU7Hx09ejmoduH7h5096L7B8O/6OGBGl4APYg8TQ0XAScAAAAASUVORK5CYII=);
-}
-#dotty {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	border-radius: 10px;
-	background: #777;
+	background-color: #00FF00;
 }
 </style>
 </head>
@@ -120,10 +101,6 @@ body {
 			</div>
 		</div>
 	</div>
-</div>
-
-<div id="indicator">
-	<div id="dotty"></div>
 </div>
 
 </body>
