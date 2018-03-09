@@ -5,20 +5,41 @@
         <!--mobile web app-->
         <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
-		    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
-      
+	<meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+	    
+	<!--iscroll-->
+	<script type="text/javascript" src="../../src/iscroll.js"></script>
+
+	<script type="text/javascript">
+	var myScroll;
+
+	function loaded() {
+		myScroll = new iScroll('wrapper', {
+			snap: true,
+			momentum: false,
+			hScrollbar: false,
+			onScrollEnd: function () {
+				document.querySelector('#indicator > li.active').className = '';
+				document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+			}
+		 });
+	}
+
+	document.addEventListener('DOMContentLoaded', loaded, false);
+	</script>
     </head>
     <body>
         <div id="wrapper">
-          <div id="page1">
-            <h1>Robot Interface</h1>
-            <p>
-              <input type="text" id="ipPort"/>
-              <button>Connect</button>
-            </p>
-            <p>
-              <canvas id="imgCanvas" style="width:300px;height:200px;"></canvas>
-            </p>
+          <div id="scroller">
+            <ul id="thelist">
+              <li><strong>1.</strong> <em>A robot may not injure a human being or, through inaction, allow a human being to come to harm.</em></li>
+              <li><strong>2.</strong> <em>A robot must obey any orders given to it by human beings, except where such orders would conflict with the First Law.</em></li>
+              <li><strong>3.</strong> <em>A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.</em></li>
+              <li><strong>Zeroth Law:</strong> <em>A robot may not harm humanity, or, by inaction, allow humanity to come to harm.</em></li>
+              <li><strong>Lyuben Dilov's Forth law:</strong> <em>A robot must establish its identity as a robot in all cases.</em></li>
+              <li><strong>Harry Harrison's Forth law:</strong> <em>A robot must reproduce. As long as such reproduction does not interfere with the First or Second or Third Law.</em></li>
+              <li><strong>Nikola Kesarovski's Fifth law:</strong> <em>A robot must know it is a robot.</em></li>
+            </ul>
           </div>
         </div>
     </body>
