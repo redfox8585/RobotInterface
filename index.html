@@ -1,19 +1,25 @@
 <html>
     <head>
         <title>Robot Interface</title>
+      
         <!--mobile web app-->
         <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+		    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+      
     </head>
     <body>
-        <h1>Robot Interface</h1>
-        <p>
-			<input type="text" id="ipPort"/>
-			<button>Connect</button>
-        </p>
-        <p>
-        	<canvas id="imgCanvas" style="width:300px;height:200px;"></canvas>
-        </p>
+        <div id="wrapper">
+          <div id="page1">
+            <h1>Robot Interface</h1>
+            <p>
+              <input type="text" id="ipPort"/>
+              <button>Connect</button>
+            </p>
+            <p>
+              <canvas id="imgCanvas" style="width:300px;height:200px;"></canvas>
+            </p>
+          </div>
+        </div>
     </body>
 </html>
