@@ -26,7 +26,19 @@ function loaded () {
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 </script>
 <style type="text/css">
-
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	-ms-touch-action: none;
+}
+body, ul, li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
 body {
 	font-size: 12px;
 	font-family: ubuntu, helvetica, arial;
@@ -68,22 +80,7 @@ body {
 	text-size-adjust: none;
 	background-color: #444;
 }
-.slide {
-	width: 200px;
-	height: 240px;
-	float: left;
-}
-.painting {
-	width: 140px;
-	height: 200px;
-	border-radius: 10px;
-	margin: 20px auto;
-	border: 1px solid #000;
-	box-shadow:
-		inset 2px 2px 6px rgba(255,255,255,0.6),
-		inset -2px -2px 6px rgba(0,0,0,0.6),
-		0 1px 8px rgba(0,0,0,0.8);
-}
+
 #indicator {
 	position: relative;
 	width: 110px;
