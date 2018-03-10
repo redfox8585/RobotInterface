@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
-<title>iScroll demo: carousel</title>
+<title>Robot Interface</title>
 
 <script type="text/javascript" src="iscroll.js"></script>
 <script type="text/javascript">
-var myScroll;
-function loaded () {
-	myScroll = new IScroll('#wrapper', {
+var scroller;
+function main() {
+	scroller = new IScroll('#wrapper', {
 		scrollX: true,
 		scrollY: false,
 		momentum: false,
@@ -64,7 +64,6 @@ body {
 	position: absolute;
 	z-index: 1;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	/* width = 100 * windowCount */
 	width: 400vw;
 	height: 100vh;
 	-webkit-transform: translateZ(0);
@@ -91,7 +90,7 @@ body {
 }
 </style>
 </head>
-<body onload="loaded()">
+<body onload="main()">
 
 <div id="viewport">
 	<div id="wrapper">
