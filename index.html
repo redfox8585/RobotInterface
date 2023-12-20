@@ -9,117 +9,14 @@
 	<link rel="apple-touch-icon-precomposed" href="./robot.png" />
 	
 <title>Robot Interface</title>
-
-<script type="text/javascript" src="iscroll.js"></script>
-<script type="text/javascript">
-var scroller;
-function main() {
-	scroller = new IScroll('#wrapper', {
-		scrollX: true,
-		scrollY: false,
-		momentum: false,
-		snap: true,
-		snapSpeed: 400,
-		keyBindings: true
-	});
-}
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-<!---------------------------------------------------------------------------------------------------->
-<!-- Wenn die Anzahl der Fenster verändert werden soll, müssen folgende Parameter angepasst werden: -->
-<!-- unter scroller, width: 100vw ein Fenster width: 200vw zwei Fenster...                          -->
-<!-- Bei <div id="scroller"> eine neue Slide hinzufügen                                             -->
-<!---------------------------------------------------------------------------------------------------->
+<script>
+	// Simulate a mouse click:
+	window.location.href = "http://www.w3schools.com";
 	
-</script>
-<style type="text/css">
-* {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-html {
-	-ms-touch-action: none;
-}
-body, ul, li {
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-body {
-	font-size: 12px;
-	font-family: ubuntu, helvetica, arial;
-	overflow: hidden; /* this is important to prevent the whole page to bounce */
-}
-#viewport {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	margin: 0 auto;
-	background: #FF0000;
-	overflow: hidden;
-}
-#wrapper {
-	width: 100vw;
-	height: 100vh;
-	margin: 0 auto;
-}
-#scroller {
-	position: absolute;
-	z-index: 1;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	width: 400vw;
-	height: 100vh;
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-ms-text-size-adjust: none;
-	-o-text-size-adjust: none;
-	text-size-adjust: none;
-	background-color: #00FF00;
-}
-.slide {
-	width: 100vw;
-	height: 100vh;
-	float: left;
-}
-</style>
+	// Simulate an HTTP redirect:
+	window.location.replace("http://www.w3schools.com");
+	</script>
 </head>
 <body onload="main()">
-
-<div id="viewport">
-	<div id="wrapper">
-		<div id="scroller">
-			<div class="slide">
-				<button>Test</button>
-				<p>Hello</p>
-			</div>
-			<div class="slide">
-				<button>Test</button>
-				<p>This is a very loooooooo</p>
-				<p>oooooooooooooooooooooooo</p>
-				<p>oooooooooooooooooooooooo</p>
-				<p>oooooooooooooooooooooooo</p>
-				<p>oooooooooooooooong text.</p>
-			</div>
-			<div class="slide">
-				<button>Test</button>
-			</div>
-			<div class="slide">
-				<button>Test</button>
-			</div>
-		</div>
-	</div>
-</div>
-
 </body>
 </html>
